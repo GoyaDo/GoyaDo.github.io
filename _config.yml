@@ -13,9 +13,9 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://www.ysmjjsy.com
 root: /
-permalink: : category/:title/
+permalink: category/:title/
 permalink_defaults:
 
 # Directory
@@ -91,6 +91,36 @@ deploy:
   branch: master
 
 sitemap:
-  path: sitemap.xml
+  path: sitemap.xml
 baidusitemap:
-  path: baidusitemap.xml
+  path: baidusitemap.xml
+
+baidu_url_submit:
+  count: 3 
+  host: https://www.ysmjjsy.com
+  token: 8CwTnws52nvX44Qv
+  path: baidu_urls.txt
+
+# hexo-neat
+# 博文压缩
+neat_enable: true
+# 压缩html
+neat_html:
+  enable: true
+  exclude:
+# 压缩css  
+neat_css:
+  enable: true
+  exclude:
+    - '**/*.min.css'
+# 压缩js
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - '**/*.min.js'
+    - '**/jquery.fancybox.pack.js'
+    - '**/index.js'  
+    - '**/love.js'
