@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://www.ysmjjsy.com/"/>
   <updated>2019-08-04T05:43:05.294Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://www.ysmjjsy.com/</id>
   
   <author>
     <name>Goya</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/category/hello-world/"/>
-    <id>http://yoursite.com/category/hello-world/</id>
+    <link href="https://www.ysmjjsy.com/category/hello-world/"/>
+    <id>https://www.ysmjjsy.com/category/hello-world/</id>
     <published>2019-08-04T05:43:05.294Z</published>
     <updated>2019-08-04T05:43:05.294Z</updated>
     
