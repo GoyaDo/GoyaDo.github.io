@@ -1,5 +1,12 @@
 ---
 title: {{ title }}
 date: {{ date }}
-tags:
+update: 
+tags: 
+categories: 
+keywords: 
+description: 
+comments: 
+password: 
+copyright: 
 ---
