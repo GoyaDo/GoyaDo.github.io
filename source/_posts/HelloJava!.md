@@ -3,8 +3,7 @@ title: HelloJava
 date: 2018-07-12 21:27:05
 update: 
 tags: Java学习入门
-categories: 
-- Java入门
+categories: - Java入门
 keywords: 如何学Java,Java入门,javac,jvm
 description: 
 copyright: true
