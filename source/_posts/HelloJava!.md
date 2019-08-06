@@ -1,13 +1,3 @@
----
-title: HelloJava
-date: 2018-07-12 21:27:05
-update: 
-tags: Java学习入门
-categories: - Java入门
-keywords: 如何学Java,Java入门,javac,jvm
-description: 
-copyright: true
----
 # ->HelloJava!
 >Goya：
 >Java是一门伟大的艺术，至少在我看来是的了，也许如果没有Java出现会出现别的类似编程语言，但是因为它的存在，促进了互联网的>发展。
@@ -51,13 +41,13 @@ class HelloWorld{
 }
 ```
 然后通过控制台执行javac
-![javac](./javac.png)
+![javac](HelloJava/javac.png)
 
 可以看到在HelloWorld.java同级目录生成一个.class文件
-![classlocation](./javaclass.png)
+![classlocation](HelloJava/javaclass.png)
 
 接着执行java命令
-![java](./java.png)
+![java](HelloJava/java.png)
 
 可以看到我们写的代码被计算机所解释编译执行，输出HelloWorld
 
@@ -74,7 +64,7 @@ class HelloWorld{
 .class文件又称**字节码文件**，它就是java帮我们进行的第一道翻译工作后的结果，这道翻译工作就是javac，可以理解为将源码编译为字节码，同时做一些词法，语法，语义上的检查，最后生成的.class文件供jvm运行。这一过程就叫**编译**，更准确的是称为**前端编译**。.class文件也就是**前端编译**产生的代码。
 
 ###前端编译：
-![Alt text](./before.png)
+![Alt text](HelloJava/before.png)
 **词法分析**：词法分析阶段是编译过程的第一个阶段。这个阶段的任务是从左到右一个字符一个字符地读入源程序，将字符序列转换为标记（token）序列的过程。这里的标记是一个字符串，是构成源代码的最小单位。在这个过程中，词法分析器还会对标记进行分类 。
 词法分析器通常不会关心标记之间的关系（属于语法分析的范畴），举例来说：词法分析器能够将括号识别为标记，但并不保证括号是否匹配。
 **语法分析**：语法分析的任务是在词法分析的基础上将单词序列组合成各类语法短语，如“程序”，“语句”，“表达式”等等.语法分析程序判断源程序在结构上是否正确.源程序的结构由上下文无关文法描述。
@@ -108,7 +98,7 @@ Java中我们经常使用的语法糖有泛型、自动装箱/拆箱、遍历循
 [深入浅出JIT编译](https://www.ibm.com/developerworks/cn/java/j-lo-just-in-time/index.html)
 
 当JVM通过类加载器加载class文件里的字节码后，会通过解释器解释称汇编指令最终再转译成CPU可以识别的机器指令，解释器是软件来实现的，主要是为了实现同一份 Java 字节码可以在不同的硬件平台上运行，而将汇编指令转换成机器指令由硬件直接实现。
-![later](./later.png)
+![later](HelloJava/later.png)
 从软件层面上， class 文件被加载进虚拟机后，类信息会存放在方法区，在实际运行的时候会执行方法区中的代码，在 JVM 中所有的线程共享堆内存和方法区，而每个线程有自己独立的 Java 方法栈，本地方法栈（面向 native 方法），PC寄存器（存放线程执行位置），当调用一个方法的时候， Java 虚拟机会在当前线程对应的方法栈中压入一个栈帧，用来存放 Java 字节码操作数以及局部变量，这个方法执行完会弹出栈帧，一个线程会连续执行多个方法，对应不同的栈帧的压入和弹出，压入栈帧后就是 JVM 解释执行的过程了。
 
 JAVA程序还是通过解释器进行解释执行，当JVM发现某个方法或代码块运行特别频繁的时候，就会认为这是“热点代码”（Hot Spot Code)。然后JIT会把部分“热点代码”翻译成本地机器相关的机器码，并进行优化，然后再把翻译后的机器码缓存起来，以备下次使用。
@@ -118,7 +108,7 @@ HotSpot虚拟机中内置了两个JIT编译器：Client Complier和Server Compli
 当 JVM 执行代码时，它并不立即开始编译代码。首先，如果这段代码本身在将来只会被执行一次，那么从本质上看，编译就是在浪费精力。因为将代码翻译成 java 字节码相对于编译这段代码并执行代码来说，要快很多。第二个原因是最优化，当 JVM 执行某一方法或遍历循环的次数越多，就会更加了解代码结构，那么 JVM 在编译代码的时候就做出相应的优化。
 
 在机器上，执行java -version命令就可以看到自己安装的JDK中JIT是哪种模式:
-![-version](./javaversion.png)
+![-version](HelloJava/javaversion.png)
 
 #### 热点检测
 上面我们说过，要想触发JIT，首先需要识别出热点代码。目前主要的热点代码识别方式是热点探测（Hot Spot Detection），有以下两种：
@@ -133,7 +123,7 @@ HotSpot虚拟机中内置了两个JIT编译器：Client Complier和Server Compli
 
 **经过前端编译与后端编译，最终我们的java文件被机器所执行。**
 ## JDK、JRE与JVM：
-![JDK](./jdk.png)
+![JDK](HelloJava/jdk.png)
 ###JDK
 Java Development ToolKit(Java开发工具包)。JDK是整个JAVA的核心，包括了Java运行环境（Java Runtime Envirnment），一堆Java工具（javac/java/jdb等）和Java基础的类库（即Java API 包括rt.jar）。
 最主流的JDK是Sun公司发布的JDK，除了Sun之外，还有很多公司和组织都开发了属于自己的JDK。
