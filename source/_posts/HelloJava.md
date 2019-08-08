@@ -1,3 +1,16 @@
+---
+title: HelloJava
+date: 2017-08-06 09:23:12
+update:
+tags: [Java基础入门]
+categories:
+ - Java入门
+keywords: java入门,HelloWorld,JDK,JRE,JVM,javac
+description: Java入门
+comments:
+password:
+copyright: true
+---
 # ->HelloJava!
 >Goya：
 >Java是一门伟大的艺术，至少在我看来是的了，也许如果没有Java出现会出现别的类似编程语言，但是因为它的存在，促进了互联网的>发展。
