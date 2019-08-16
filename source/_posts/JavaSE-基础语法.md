@@ -1,3 +1,16 @@
+---
+title: JavaSE-基础语法
+date: 2017-08-16 21:33:02
+update: 2017-12-16
+tags: [Java基础入门]
+categories:
+ - JavaSE基础语法
+keywords: java入门,JavaSE基础语法,进制转换,数据类型
+description: JavaSE基础语法
+comments:
+password:
+copyright: true
+---
 # JavaSE-基础语法
 
 ## 关键字
