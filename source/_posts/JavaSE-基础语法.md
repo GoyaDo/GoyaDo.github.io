@@ -511,8 +511,6 @@ static BigDecimal valueOf(long x, int scale)
 /* 返回值等于 x 或者 x/10^(scale) 的大实数 */
 ```
 
-##  
-
 ## 进制
 
 进制也就是进位制，是人们规定的一种进位方法。
