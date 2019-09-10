@@ -27,9 +27,9 @@ Collection集合的数据结构是针对元素有效
 
 下面是接口Map的类结构。
 
-![map](JavaSE-集合/map.png)
+![map](JavaSE-集合2/map.png)
 
-![map](JavasE-集合/map1.png)
+![map](JavaSE-集合2/map1.png)
 
 从上面这张图中我们可以看到接口Map提供了很多查询、更新和获取存储的键值对的方法，更新包括方法clear()、put()、putAll()、remove()等等，查询方法包括containsKey、containsValue等等。Map接口常用的有三个具体实现类，分别是HashMap、LinkedHashMap、TreeMap。
 
@@ -90,7 +90,7 @@ HashMap是基于哈希表的Map接口的非同步实现，继承自AbstractMap�
 *HashMap*实现了*Map*接口，允许放入null元素，除该类未实现同步外，其余跟Hashtable大致相同，跟*TreeMap*不同，该容器不保证元素顺序，根据需要该容器可能会对元素重新哈希，元素的顺序也会被重新打散，因此不同时间迭代同一个*HashMap*的顺序可能会不同。
 根据对冲突的处理方式不同，哈希表有两种实现方式，一种开放地址方式（Open addressing），另一种是冲突链表方式（Separate chaining with linked lists）。**Java HashMap采用的是冲突链表方式**。
 
-![HashMap](JavaSE-集合/hm1.jpg)
+![HashMap](JavaSE-集合2/hm1.jpg)
 
 从上图容易看出，如果选择合适的哈希函数，put()和get()方法可以在常数时间内完成。但在对*HashMap*进行迭代时，需要遍历整个table以及后面跟的冲突链表。因此对于迭代比较频繁的场景，不宜将*HashMap*的初始大小设的过大。
 
@@ -149,7 +149,7 @@ static class Node<K,V> implements Map.Entry<K,V> {
     }
 ```
 
-![HashMap](JavaSE-集合/hm2.png)
+![HashMap](JavaSE-集合2/hm2.png)
 
 Key.hashCode() 获得键的哈希值
 
@@ -218,7 +218,7 @@ returnr;
 get(Object key)方法根据指定的key值返回对应的value，该方法调用了getEntry(Object key)得到相应的entry，然后返回entry.getValue()。因此getEntry()是算法的核心。
 算法思想是首先通过hash()函数得到对应bucket的下标，然后依次遍历冲突链表，通过key.equals(k)方法来判断是否是要找的那个entry。
 
-![HashMap](JavaSE-集合/hm3.png)
+![HashMap](JavaSE-集合2/hm3.png)
 
 上图中hash(k)&(table.length-1)等价于hash(k)%table.length，原因是*HashMap*要求table.length必须是2的指数，因此table.length-1就是二进制低位全是1，跟hash(k)相与会将哈希值的高位全抹掉，剩下的就是余数了。
 
@@ -243,7 +243,7 @@ final Entry<K,V> getEntry(Object key) {
 
 put(K key, V value)方法是将指定的key, value对添加到map里。该方法首先会对map做一次查找，看是否包含该元组，如果已经包含则直接返回，查找过程类似于getEntry()方法；如果没有找到，则会通过addEntry(int hash, K key, V value, int bucketIndex)方法插入新的entry，插入方式为**头插法**。
 
-![HashMap](JavaSE-集合/hm4.png)
+![HashMap](JavaSE-集合2/hm4.png)
 
 ```java
 //addEntry()
@@ -264,7 +264,7 @@ void addEntry(int hash, K key, V value, int bucketIndex) {
 
 remove(Object key)的作用是删除key值对应的entry，该方法的具体逻辑是在removeEntryForKey(Object key)里实现的。removeEntryForKey()方法会首先找到key值对应的entry，然后删除该entry（修改链表的相应指针）。查找过程跟getEntry()过程类似。
 
-![HashMap](JavaSE-集合/hm5.png)
+![HashMap](JavaSE-集合2/hm5.png)
 
 ```java
 //removeEntryForKey()
@@ -323,7 +323,7 @@ LinkedHashMap继承自HashMap，它主要是用链表实现来扩展HashMap类�
 
 *LinkedHashMap*实现了*Map*接口，即允许放入key为null的元素，也允许插入value为null的元素。从名字上可以看出该容器是*linked list*和*HashMap*的混合体，也就是说它同时满足*HashMap*和*linked list*的某些特性。**可将LinkedHashMap看作采用linked list增强的HashMap。**
 
-![LinkedHashMap](JavaSE-集合/ls1.png)
+![LinkedHashMap](JavaSE-集合2/ls1.png)
 
 事实上*LinkedHashMap*是*HashMap*的直接子类，**二者唯一的区别是LinkedHashMap在HashMap的基础上，采用双向链表（doubly-linked list）的形式将所有entry连接起来，这样是为保证元素的迭代顺序跟插入顺序相同**。上图给出了*LinkedHashMap*的结构图，主体部分跟*HashMap*完全一样，多了header指向双向链表的头部（是一个哑元），**该双向链表的迭代顺序就是entry的插入顺序**。
 
@@ -361,7 +361,7 @@ put(K key, V value)方法是将指定的key, value对添加到map里。该方法
 1. 从table的角度看，新的entry需要插入到对应的bucket里，当有哈希冲突时，采用头插法将新的entry插入到冲突链表的头部。
 2. 从header的角度看，新的entry需要插入到双向链表的尾部。
 
-![LinkedHashMap](JavaSE-集合/ls2.png)
+![LinkedHashMap](JavaSE-集合2/ls2.png)
 
 addEntry()代码如下：
 
@@ -406,7 +406,7 @@ remove(Object key)的作用是删除key值对应的entry，该方法的具体逻
 > 1. 从table的角度看，需要将该entry从对应的bucket里删除，如果对应的冲突链表不空，需要修改冲突链表的相应引用。
 > 2. 从header的角度来看，需要将该entry从双向链表中删除，同时修改链表中前面以及后面元素的相应引用。
 
-![LinkedHashMap](JavaSE-集合/ls3.png)
+![LinkedHashMap](JavaSE-集合2/ls3.png)
 
 removeEntryForKey()对应的代码如下：
 
@@ -688,7 +688,7 @@ Java *TreeMap*实现了*SortedMap*接口，也就是说会按照key的大小顺�
 
 **TreeMap底层通过红黑树（Red-Black tree）实现**，也就意味着containsKey(), get(), put(), remove()都有着log(n)的时间复杂度。其具体算法实现参照了《算法导论》。
 
-![红黑树](JavaSE-集合/hh1.png)
+![红黑树](JavaSE-集合2/hh1.png)
 
 出于性能原因，*TreeMap*是非同步的（not synchronized），如果需要在多线程环境使用，需要程序员手动同步；或者通过如下方式将*TreeMap*包装成（wrapped）同步的：
 
@@ -711,7 +711,7 @@ SortedMap m = Collections.synchronizedSortedMap(new TreeMap(...));
 
 左旋的过程是将x的右子树绕x逆时针旋转，使得x的右子树成为x的父亲，同时修改相关节点的引用。旋转之后，二叉查找树的属性仍然满足。
 
-![红黑树](JavaSE-集合/hh2.png)
+![红黑树](JavaSE-集合2/hh2.png)
 
 *TreeMap*中左旋代码如下：
 
@@ -740,7 +740,7 @@ private void rotateLeft(Entry<K,V> p) {
 
 右旋的过程是将x的左子树绕x顺时针旋转，使得x的左子树成为x的父亲，同时修改相关节点的引用。旋转之后，二叉查找树的属性仍然满足。
 
-![红黑树](JavaSE-集合/hh3.png)
+![红黑树](JavaSE-集合2/hh3.png)
 
 *TreeMap*中右旋代码如下：
 
@@ -769,7 +769,7 @@ private void rotateRight(Entry<K,V> p) {
 
 get(Object key)方法根据指定的key值返回对应的value，该方法调用了getEntry(Object key)得到相应的entry，然后返回entry.value。因此getEntry()是算法的核心。算法思想是根据key的自然顺序（或者比较器顺序）对二叉查找树进行查找，直到找到满足k.compareTo(p.key) == 0的entry。
 
-![红黑树](JavaSE-集合/hh4.png)
+![红黑树](JavaSE-集合2/hh4.png)
 
 具体代码如下：
 
@@ -826,7 +826,7 @@ public V put(K key, V value) {
 
 上述代码的插入部分并不难理解：首先在红黑树上找到合适的位置，然后创建新的entry并插入（当然，新插入的节点一定是树的叶子）。难点是调整函数fixAfterInsertion()，前面已经说过，调整往往需要1.改变某些节点的颜色，2.对某些节点进行旋转。
 
-![红黑树](JavaSE-集合/hh5.png)
+![红黑树](JavaSE-集合2/hh5.png)
 
 调整函数fixAfterInsertion()的具体代码如下，其中用到了上文中提到的rotateLeft()和rotateRight()函数。通过代码我们能够看到，情况2其实是落在情况3内的。情况4～情况6跟前三种情况是对称的，因此图解中并没有画出后三种情况，读者可以参考代码自行理解。
 
@@ -887,7 +887,7 @@ remove(Object key)的作用是删除key值对应的entry，该方法首先通过
 
 后继节点在红黑树的删除操作中将会用到。
 
-![红黑树](JavaSE-集合/hm6.png)
+![红黑树](JavaSE-集合2/hm6.png)
 
 TreeMap
 
@@ -975,7 +975,7 @@ private void deleteEntry(Entry<K,V> p) {
 
 跟上文中讲过的fixAfterInsertion()函数一样，这里也要分成若干种情况。记住，无论有多少情况，具体的调整操作只有两种：1.改变某些节点的颜色，2.对某些节点进行旋转。
 
-![红黑树](JavaSE-集合/hh7.png)
+![红黑树](JavaSE-集合2/hh7.png)
 
 上述图解的总体思想是：将情况1首先转换成情况2，或者转换成情况3和情况4。当然，该图解并不意味着调整过程一定是从情况1开始。通过后续代码我们还会发现几个有趣的规则：a).如果是由情况1之后紧接着进入的情况2，那么情况2之后一定会退出循环（因为x为红色）；b).一旦进入情况3和情况4，一定会退出循环（因为x为root）。
 
