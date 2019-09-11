@@ -1824,6 +1824,22 @@ ThreadLocal并不能代替同步机制,同步机制是为了同步多个线程�
 
 ![duo](JavaSE-多线程/duo4.png)
 
+### 定时器
+
+定时器是一个应用十分广泛的线程工具，可用于调度多个定时任务以后台线程的方式执行，在Java中，可以通过Timer和TimerTask类来实现定义调度的功能
+
+```Java
+//Timer
+public Timer();
+public void schedule(TimerTask task,long delay);
+public void schedule(TimerTask task,long delay,long period);
+//TimerTask
+public abstract void run();
+public boolean cancel();
+```
+
+开发中：Quartz是一个完全由Java编写的开源调度框架
+
 本文转载编辑于
 
 [Java多线程](https://www.jianshu.com/p/b33ff24b411e)
