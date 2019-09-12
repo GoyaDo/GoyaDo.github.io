@@ -4,7 +4,8 @@ date: 2017-08-25
 update: 2017-12-16
 tags: [Java基础入门]
 categories:
- - JavaSE流
+- JavaSE
+- JavaSE流
 keywords: java入门,JavaSE基础语法,IO流
 description: JavaSE-IO流详解
 comments:

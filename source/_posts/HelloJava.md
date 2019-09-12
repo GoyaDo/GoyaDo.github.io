@@ -4,7 +4,8 @@ date: 2017-08-06 09:23:12
 update:
 tags: [Java基础入门]
 categories:
- - Java入门
+- JavaSE
+- Java入门
 keywords: java入门,HelloWorld,JDK,JRE,JVM,javac
 description: Java入门
 comments:
