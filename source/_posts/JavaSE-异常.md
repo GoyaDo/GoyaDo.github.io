@@ -4,6 +4,7 @@ date: 2017-08-23 18:35:42
 update: 2017-12-16
 tags: [Java基础入门]
 categories:
+ - JavaSE
  - JavaSE异常
 keywords: java入门,JavaSE基础语法,异常
 description: JavaSE异常，断言，记录日志，自定义异常
