@@ -811,9 +811,16 @@ DDD(领域驱动设计):这种方式认为每个类都应该是完备的领域�
 
    • volatile不会提供任何原子操作，它也不能用来修饰final类型的变量。
 
-```java
-public class SynchronizedThread {
-  class Bank {
+> volatile关键字表示直接操内存池里的数据
+>
+> 不操作副本，直接操作原始空间
+>
+> 主要定义在属性上
+>
+> 无法描述同步处理，只是一种直接内存的处理，避免了副本的操作，而synchronize是实现同步的
+
+    public class SynchronizedThread {
+      class Bank {
     private volatile int account = 100;
     public int getAccount() {
       return account;
@@ -853,8 +860,8 @@ public class SynchronizedThread {
 }
   /**
   * 建立线程，调用内部类
-  */
-  public void useThread() {
+      */
+        public void useThread() {
     Bank bank = new Bank();
     NewThread new_thread = new NewThread(bank);
     System.out.println("线程1");
@@ -864,7 +871,7 @@ public class SynchronizedThread {
     Thread thread2 = new Thread(new_thread);
     thread2.start();
   }
- 
+
   public static void main(String[] args) {
     SynchronizedThread st = new SynchronizedThread();
     st.useThread();
@@ -889,7 +896,7 @@ ReentrantReadWriteLock为读写提供了三种锁模式:Writing,ReadingOptimisti
 
 在[Java](http://www.2cto.com/kf/ware/Java/)SE5.0中新增了一个java.util.concurrent包来支持同步。ReentrantLock类是可重入、互斥、实现了Lock接口的锁，它与使用synchronized方法和快具有相同的基本行为和语义，并且扩展了其能力。ReenreantLock类的常用方法有：    
 
-```java
+​```java
  ReentrantLock();// 创建一个ReentrantLock实例         
  lock();//获得锁        
  unlock();//释放锁
