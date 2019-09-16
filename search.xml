@@ -231,7 +231,7 @@
   <entry>
     <title><![CDATA[国际化实现原理]]></title>
     <url>%2Fcategory%2F%E5%9B%BD%E9%99%85%E5%8C%96%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%2F</url>
-    <content type="text"><![CDATA[国际化程序实现原理定义保存文字的文件信息根据不同的区域语言的编码读取指定的资源信息Locale类描述区域和语言编码的类123456public Locale(String language);public Locale(String language,String country);Locale loc = new Locale("zh","CN"); //中文环境Locale.getDefault(): //默认环境读取资源文件：ResourceBundle获取ResourceBundle类对象的方法:public static final ResourceBundle getBundle(String baseName);baseName -&gt; 描述资源文件的名称，但是没有后缀String getString():获取资源信息消息格式化MessageFormat类占位符 {0},format():处理占位符信息]]></content>
+    <content type="text"><![CDATA[国际化程序实现原理定义保存文字的文件信息根据不同的区域语言的编码读取指定的资源信息把与语言相关的所有字符串都写成变量写两个配置文件，一个文件中存放中文信息、另一个存放英文信息Locale类描述区域和语言编码的类123456public Locale(String language);public Locale(String language,String country);Locale loc = new Locale("zh","CN"); //中文环境Locale.getDefault(): //默认环境读取资源文件：ResourceBundle获取ResourceBundle类对象的方法:public static final ResourceBundle getBundle(String baseName);baseName -&gt; 描述资源文件的名称，但是没有后缀String getString():获取资源信息使用一个类，来通过语言环境，最终识别加载哪一个文件的信息：ResourceBundle语言环境：Localenew Locale(“zh”,”CN”);Locale.getDefault();Locale.CHINA消息格式化MessageFormat类占位符 {0},format():处理占位符信息步骤123获取Locale，这是由客户端的浏览器提供的Locale创建ResourceBundle把所有语言信息使用rb.getString("xxx")来替换]]></content>
       <categories>
         <category>Java相关</category>
         <category>国际化实现原理</category>
