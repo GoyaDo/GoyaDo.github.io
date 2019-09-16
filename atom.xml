@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.ysmjjsy.com/"/>
-  <updated>2019-09-16T04:56:20.899Z</updated>
+  <updated>2019-09-16T05:22:26.137Z</updated>
   <id>https://www.ysmjjsy.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaSE-JVM</title>
+    <link href="https://www.ysmjjsy.com/category/JavaSE-jvm/"/>
+    <id>https://www.ysmjjsy.com/category/JavaSE-jvm/</id>
+    <published>2017-09-07T16:00:00.000Z</published>
+    <updated>2019-09-16T05:22:26.137Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Mon Sep 16 2019 13:22:49 GMT+0800 (GMT+08:00) --><h1 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h1><p>推荐周志明的《<a href="https://github.com/doocs/jvm/blob/master/book/jvm.pdf" target="_blank" rel="noopener">深入理解Java虚拟机——JVM高级特性与最佳实践(第2版)</a>》</p><p>推荐：</p><p><a href="https://github.com/doocs/jvm" target="_blank" rel="noopener">Java 虚拟机底层原理知识总结</a></p><p><a href="https://zhuanlan.zhihu.com/p/34426768" target="_blank" rel="noopener">关于Jvm知识看这一篇就够了</a></p><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      JavaSE-JVM
+    
+    </summary>
+    
+      <category term="JavaSE" scheme="https://www.ysmjjsy.com/categories/JavaSE/"/>
+    
+      <category term="JavaSE-JVM" scheme="https://www.ysmjjsy.com/categories/JavaSE/JavaSE-JVM/"/>
+    
+    
+      <category term="Java基础入门" scheme="https://www.ysmjjsy.com/tags/Java%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaSE-枚举</title>
