@@ -1,7 +1,6 @@
 ---
 title: JavaSE-JVM
-date: 2017-09-08
-update: 2017-12-16
+date: 2017-12-16
 tags: [Java基础入门]
 categories:
 - JavaSE

@@ -1,7 +1,6 @@
 ---
 title: JavaSE-面向对象2
-date: 2017-08-20 14:13:27
-update: 2017-12-16
+date: 2017-08-20
 tags: [Java基础入门]
 categories:
  - JavaSE
