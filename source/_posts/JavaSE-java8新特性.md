@@ -13,6 +13,12 @@ copyright: true
 ---
 # Java8新特性
 
+底层数据结构发生改变，更快
+底层内存结构发生改变：
+方法区是堆内存中永久区的一部分，1.8之后去掉方法区的永久区，方法区改为元空间。
+
+![i](JavaSE-java8新特性/d1.png)
+
 ## Lambda表达式
 
 ### 为什么使用Lambda表达式
@@ -839,7 +845,7 @@ Buffer 中的重要概念：
     * get() ：读取单个字节
     * get(byte[] dst)：批量读取多个字节到 dst 中
     * get(int index)：读取指定索引位置的字节(不会移动 position)
-  *  放入数据到 Buffer 中
+  * 放入数据到 Buffer 中
     * put(byte b)：将给定单个字节写入缓冲区的当前位置
     * put(byte[] src)：将 src 中的字节写入缓冲区的当前位置
     * put(int index, byte b)：将指定字节写入缓冲区的索引位置(不会移动 position)
@@ -1144,7 +1150,7 @@ sourceChannel.read(buf);
 #### Files 类
 
 * java.nio.file.Files 用于操作文件或目录的工具类。
-*  Files常用方法：
+* Files常用方法：
   *  Path copy(Path src, Path dest, CopyOption … how) : 文件的复制
   *  Path createDirectory(Path path, FileAttribute … attr) : 创建一个目录
   *  Path createFile(Path path, FileAttribute … arr) : 创建一个文件
@@ -1164,9 +1170,9 @@ sourceChannel.read(buf);
 
 * Files常用方法：用于操作内容
   * SeekableByteChannel newByteChannel(Path path, OpenOption…how) : 获取与指定文件的连接，how 指定打开方式
-  *  DirectoryStream newDirectoryStream(Path path) : 打开 path 指定的目录
-  *  InputStream newInputStream(Path path, OpenOption…how):获取 InputStream 对象
-  *  OutputStream newOutputStream(Path path, OpenOption…how) : 获取 OutputStream 对象]()
+  * DirectoryStream newDirectoryStream(Path path) : 打开 path 指定的目录
+  * InputStream newInputStream(Path path, OpenOption…how):获取 InputStream 对象
+  * OutputStream newOutputStream(Path path, OpenOption…how) : 获取 OutputStream 对象]()
 
 #### 自动资源管理
 
