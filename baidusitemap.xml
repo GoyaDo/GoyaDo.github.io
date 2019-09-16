@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.ysmjjsy.com/category/JavaSE-java8%E6%96%B0%E7%89%B9%E6%80%A7/</loc>
+    <loc>https://www.ysmjjsy.com/category/JavaSE-%E6%95%B0%E7%BB%84/</loc>
     <lastmod>2019-09-16</lastmod>
   </url>  <url>
-    <loc>https://www.ysmjjsy.com/category/JavaSE-jvm/</loc>
-    <lastmod>2019-09-16</lastmod>
-  </url>  <url>
-    <loc>https://www.ysmjjsy.com/category/JavaSE-%E6%9E%9A%E4%B8%BE/</loc>
-    <lastmod>2019-09-16</lastmod>
-  </url>  <url>
-    <loc>https://www.ysmjjsy.com/category/JavaSE-%E6%B3%9B%E5%9E%8B/</loc>
+    <loc>https://www.ysmjjsy.com/category/JavaSE-%E5%8F%8D%E5%B0%84/</loc>
     <lastmod>2019-09-16</lastmod>
   </url>  <url>
     <loc>https://www.ysmjjsy.com/category/JavaSE-%E4%BB%A3%E7%90%86/</loc>
@@ -19,16 +13,25 @@
     <loc>https://www.ysmjjsy.com/category/JavaSE-%E6%B3%A8%E8%A7%A3/</loc>
     <lastmod>2019-09-16</lastmod>
   </url>  <url>
-    <loc>https://www.ysmjjsy.com/category/JavaSE-%E5%8F%8D%E5%B0%84/</loc>
+    <loc>https://www.ysmjjsy.com/category/JavaSE-jvm/</loc>
+    <lastmod>2019-09-16</lastmod>
+  </url>  <url>
+    <loc>https://www.ysmjjsy.com/category/JavaSE-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A12/</loc>
+    <lastmod>2019-09-16</lastmod>
+  </url>  <url>
+    <loc>https://www.ysmjjsy.com/category/JavaSE-java8%E6%96%B0%E7%89%B9%E6%80%A7/</loc>
+    <lastmod>2019-09-16</lastmod>
+  </url>  <url>
+    <loc>https://www.ysmjjsy.com/category/JavaSE-%E6%9E%9A%E4%B8%BE/</loc>
+    <lastmod>2019-09-16</lastmod>
+  </url>  <url>
+    <loc>https://www.ysmjjsy.com/category/JavaSE-%E6%B3%9B%E5%9E%8B/</loc>
     <lastmod>2019-09-16</lastmod>
   </url>  <url>
     <loc>https://www.ysmjjsy.com/category/JavaSE-%E5%BC%82%E5%B8%B8/</loc>
     <lastmod>2019-09-12</lastmod>
   </url>  <url>
     <loc>https://www.ysmjjsy.com/category/JavaSE-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</loc>
-    <lastmod>2019-09-12</lastmod>
-  </url>  <url>
-    <loc>https://www.ysmjjsy.com/category/JavaSE-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A12/</loc>
     <lastmod>2019-09-12</lastmod>
   </url>  <url>
     <loc>https://www.ysmjjsy.com/category/JavaSE-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</loc>
