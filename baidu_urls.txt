@@ -1,3 +1,3 @@
 https://www.ysmjjsy.com/category/Intelij/
+https://www.ysmjjsy.com/category/maven/
 https://www.ysmjjsy.com/category/国际化实现原理/
-https://www.ysmjjsy.com/category/JavaSE-注解/
