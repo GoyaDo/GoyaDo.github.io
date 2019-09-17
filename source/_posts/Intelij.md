@@ -535,7 +535,5 @@ Other command line arguments：-encoding UTF-8 -charset UTF-8
 
 ![idea](Intelij/q7.png)
 
-
-
-
+[IDEA](https://blog.csdn.net/qq_42914528/article/details/89710864)
 
