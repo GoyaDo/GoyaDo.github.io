@@ -1,6 +1,6 @@
 ---
 title: 从零开始Intellij的使用
-date: 2017-08-29
+date: 2018-08-29
 tags: [Intellij]
 categories:
 - 工具使用
