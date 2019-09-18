@@ -33,6 +33,16 @@ WebWork内核是XWork
 
 ![Struts2](Struts2/3.png)
 
+**工作流程：**
+（1）客户端浏览器发送HTTP请求到Web应用
+（2）Web容器将请求传递到标准ActionContextCleanUp过滤器以消除属性，而不让后续过滤器清楚，以延长Action中属性（包括自定义属性）的生命周期。
+（3）再经过如stimesh等其他过滤器后，请求传递给StrutsPrepareAndExecuteFilter核心控制器
+（4）StrutsPrepareAndExecuteFilter调用ActionMapper（Action映射器）确定调用哪个Action，再将控制权转移给ActionProxy代理
+（5）ActionProxy代理调用配置管理器ConfigurationManager从配置文件struts.xml中读取配置信息，然后创建ActionInvocation对象
+（6）ActionInvocation在调用拦截器链中的拦截器后再调用Action，根据Action返回的结果字符串查找对应的Result
+（7）Result调用视图模板，再以相反的顺序执行拦截器链，返回HTTP响应
+（8）HTTP响应以相反的顺序返回给核心控制器StrutsPrepareAndExecuteFilter以及其他web.xml中定义的过滤器，最终返回给客户端。
+
 ## Struts2搭建
 
 **Struts2搭建流程**
