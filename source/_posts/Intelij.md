@@ -535,5 +535,29 @@ Other command line arguments：-encoding UTF-8 -charset UTF-8
 
 ![idea](Intelij/q7.png)
 
+## 快捷键
+
+![idea](Intelij/w1.png)
+
+![idea](Intelij/w2.png)
+
+![idea](Intelij/w3.png)
+
+![idea](Intelij/w4.png)
+
+![idea](Intelij/w5.png)
+
+![idea](Intelij/w6.png)
+
+![idea](Intelij/w7.png)
+
+![idea](Intelij/w8.png)
+
+![idea](Intelij/w9.png)
+
+![idea](Intelij/w11.png)
+
+![idea](Intelij/w12.png)
+
 [IDEA](https://blog.csdn.net/qq_42914528/article/details/89710864)
 
